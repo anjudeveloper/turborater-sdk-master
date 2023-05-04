@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4A62E66-AAE2-4CB0-81C6-64CAF7A7483B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TurboRater.ApiClients</RootNamespace>
+    <AssemblyName>TurboRater.ApiClients</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.OData.Client, Version=6.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Client.6.13.0\lib\net40\Microsoft.OData.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=6.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.6.13.0\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.OData.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=6.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.6.13.0\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.OData.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=6.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.6.13.0\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EndorsementLimit.cs" />
+    <Compile Include="Imp\AgencyQuoteStorageNotificationRequest.cs" />
+    <Compile Include="Imp\ApplyTemplateRequest.cs" />
+    <Compile Include="Imp\ImpVinResponse.cs" />
+    <Compile Include="Imp\LimitDefaultGroup.cs" />
+    <Compile Include="Imp\PolicyAuditModel.cs" />
+    <Compile Include="Imp\PpcInfo.cs" />
+    <Compile Include="Imp\PremiumValuationRequest.cs" />
+    <Compile Include="Imp\PremiumValuationResponse.cs" />
+    <Compile Include="Imp\_ApiAgency.cs" />
+    <Compile Include="Imp\_ApiAgencyLocation.cs" />
+    <Compile Include="Imp\DeletePolicyRequest.cs" />
+    <Compile Include="Imp\IAgency.cs" />
+    <Compile Include="Imp\IAgencyLocation.cs" />
+    <Compile Include="Imp\IImpClient.cs" />
+    <Compile Include="Imp\ImpClient.cs" />
+    <Compile Include="Imp\ImpClientOData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImpClientOData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imp\ImpConstants.cs" />
+    <Compile Include="Imp\ImpCoPay.cs" />
+    <Compile Include="Imp\ImpCoverage.cs" />
+    <Compile Include="Imp\ImpCoverageContainer.cs" />
+    <Compile Include="Imp\ImpDed.cs" />
+    <Compile Include="Imp\ImpLimit.cs" />
+    <Compile Include="Imp\ImpUser.cs" />
+    <Compile Include="Imp\InsuredSearchResult.cs" />
+    <Compile Include="Imp\QuoteLoadResult.cs" />
+    <Compile Include="Imp\QuoteLoadWrapper.cs" />
+    <Compile Include="Imp\QuoteSearchResult.cs" />
+    <Compile Include="Imp\RateAnalysisCar.cs" />
+    <Compile Include="Imp\RateAnalysisResult.cs" />
+    <Compile Include="Imp\SavePolicyRequest.cs" />
+    <Compile Include="Imp\SavePolicyResponse.cs" />
+    <Compile Include="Imp\StorageSearchResult.cs" />
+    <Compile Include="Imp\ValidatePolicyRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RateEngineApi\ApiAccount.cs" />
+    <Compile Include="RateEngineApi\ApiListItem.cs" />
+    <Compile Include="RateEngineApi\CarrierInfo.cs" />
+    <Compile Include="RateEngineApi\CompanyInfo.cs" />
+    <Compile Include="RateEngineApi\CompanyInfoRequest.cs" />
+    <Compile Include="RateEngineApi\CompanyInfoResponse.cs" />
+    <Compile Include="RateEngineApi\CompanyQuestion.cs" />
+    <Compile Include="RateEngineApi\Constants.cs" />
+    <Compile Include="RateEngineApi\Coverage.cs" />
+    <Compile Include="RateEngineApi\Endorsement2.cs" />
+    <Compile Include="RateEngineApi\EndorsementAdditionalData.cs" />
+    <Compile Include="RateEngineApi\HOCompanyEndorsement.cs" />
+    <Compile Include="RateEngineApi\HOCustomEntry.cs" />
+    <Compile Include="RateEngineApi\HODeductible.cs" />
+    <Compile Include="RateEngineApi\IRateEngineApiClient.cs" />
+    <Compile Include="RateEngineApi\ITCRateEngineRequest.cs" />
+    <Compile Include="RateEngineApi\ITCRateEngineRequestWrapper.cs" />
+    <Compile Include="RateEngineApi\ITCRateEngineResponse.cs" />
+    <Compile Include="RateEngineApi\ITCRateEngineResponseBase.cs" />
+    <Compile Include="RateEngineApi\ITCRateEngineResponseHO2.cs" />
+    <Compile Include="RateEngineApi\ITCRateEngineResponseWrapper.cs" />
+    <Compile Include="RateEngineApi\RateEngineApiClient.cs" />
+    <Compile Include="RateEngineApi\RateEngineAPIMarketBasketRequest.cs" />
+    <Compile Include="RateEngineApi\RateEngineAPIMarketBasketResponse.cs" />
+    <Compile Include="RateEngineApi\ResponseCar.cs" />
+    <Compile Include="RateEngineApi\ResponseDriver.cs" />
+    <Compile Include="RateEngineApi\ResponseMessage.cs" />
+    <Compile Include="RateEngineApi\SummaryItem.cs" />
+    <Compile Include="Imp\UnlockPolicyRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TurboRater.Insurance.AU\TurboRater.Insurance.AU.csproj">
+      <Project>{3e9e2368-bae0-44b5-aa94-25271c8558ac}</Project>
+      <Name>TurboRater.Insurance.AU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater.Insurance.DataTransformation\TurboRater.Insurance.DataTransformation.csproj">
+      <Project>{2dd9a915-d191-48b7-bdc7-b2542548c945}</Project>
+      <Name>TurboRater.Insurance.DataTransformation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater.Insurance.HO\TurboRater.Insurance.HO.csproj">
+      <Project>{7df8399b-1efa-4961-ad09-c0570606bd71}</Project>
+      <Name>TurboRater.Insurance.HO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater.Insurance\TurboRater.Insurance.csproj">
+      <Project>{77261b66-e8c7-4f28-a44d-7b1feb5853a2}</Project>
+      <Name>TurboRater.Insurance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater.InterfaceSpecifications\TurboRater.InterfaceSpecifications.csproj">
+      <Project>{1bf25355-9372-407b-b242-540fa0766416}</Project>
+      <Name>TurboRater.InterfaceSpecifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater\TurboRater.csproj">
+      <Project>{af1b46f2-aeaa-47ae-adda-7bfc7d0cc3a2}</Project>
+      <Name>TurboRater</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Imp\ImpClientOData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ImpClientOData.cs</LastGenOutput>
+    </None>
+    <None Include="Imp\ImpClientOData.ttinclude" />
+    <None Include="packages.config" />
+    <None Include="TurboRater.ApiClients.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

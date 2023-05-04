@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DD9A915-D191-48B7-BDC7-B2542548C945}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TurboRater.Insurance.DataTransformation</RootNamespace>
+    <AssemblyName>TurboRater.Insurance.DataTransformation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InsBridge.cs" />
+    <Compile Include="IntegrationCustomizationConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransformationHelper.cs" />
+    <Compile Include="TT2AUBridge.cs" />
+    <Compile Include="TT2Bridge.cs" />
+    <Compile Include="TT2Tag.cs" />
+    <Compile Include="TT2TagList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TurboRater.Insurance.HO\TurboRater.Insurance.HO.csproj">
+      <Project>{7df8399b-1efa-4961-ad09-c0570606bd71}</Project>
+      <Name>TurboRater.Insurance.HO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater\TurboRater.csproj">
+      <Project>{af1b46f2-aeaa-47ae-adda-7bfc7d0cc3a2}</Project>
+      <Name>TurboRater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater.Insurance.AU\TurboRater.Insurance.AU.csproj">
+      <Project>{3e9e2368-bae0-44b5-aa94-25271c8558ac}</Project>
+      <Name>TurboRater.Insurance.AU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurboRater.Insurance\TurboRater.Insurance.csproj">
+      <Project>{77261b66-e8c7-4f28-a44d-7b1feb5853a2}</Project>
+      <Name>TurboRater.Insurance</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TurboRater.Insurance.DataTransformation.nuspec" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

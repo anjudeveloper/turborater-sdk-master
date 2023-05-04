@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>TurboRater.Insurance.DataTransformation</id>
+    <authors>ITC</authors>
+    <owners>ITC</owners>
+    <version>1.0.0.0</version>
+    <description>Export/Import features for the TurboRater SDK.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/getitc/turborater-sdk</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Initial release.</releaseNotes>
+    <dependencies>
+      <dependency id="TurboRater" version="1.0.0.0" />
+      <dependency id="TurboRater.Insurance" version="1.0.0.0"/>
+      <dependency id="TurboRater.Insurance.AU" version="1.0.0.0"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Debug\TurboRater.Insurance.DataTransformation.dll" target="lib\net40"/>
+    <file src="bin\Debug\TurboRater.Insurance.DataTransformation.pdb" target="lib\net40"/>
+    <file src="*.cs" target="src"/>
+    <file src="**\*.cs" target="src"/>
+  </files>
+</package>

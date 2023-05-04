@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>TurboRater</id>
+    <authors>ITC</authors>
+    <owners>ITC</owners>
+    <version>1.0.0.0</version>
+    <description>Base classes and utility classes for the TurboRater SDK.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/getitc/turborater-sdk</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Initial release.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="bin\Debug\TurboRater.dll" target="lib\net40"/>
+    <file src="bin\Debug\TurboRater.pdb" target="lib\net40"/>
+    <file src="*.cs" target="src"/>
+    <file src="**\*.cs" target="src"/>
+  </files>
+</package>
